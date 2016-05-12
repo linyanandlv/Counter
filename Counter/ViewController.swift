@@ -76,6 +76,10 @@ class ViewController: UIViewController {
         let result = db.execute(sql)
         print(result)
     }
+    @IBAction func start(sender: AnyObject) {
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
