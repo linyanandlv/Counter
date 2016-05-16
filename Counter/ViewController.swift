@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var duiming1: UITextField!
+    @IBOutlet weak var duiming2: UITextField!
 
-  
-    
-    
     
     @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var num1: UITextField!
@@ -21,22 +21,12 @@ class ViewController: UIViewController {
         num1.text = String(Int(num1.text!)!+1)
     }
     
-    
-    
-    
-
     @IBAction func add2(sender: UIButton) {
        
          num2.text = String(Int(num2.text!)!+1)
     }
-    
-    
-    
-    
-    
-    var db:SQLiteDB!
-    
    
+    var db:SQLiteDB!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +34,7 @@ class ViewController: UIViewController {
         //获取数据库实例
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20))")
+        db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20),aname varchar(20),bname varchar(20))")
         //如果有数据则加载
         initUser()
     }
@@ -62,6 +52,9 @@ class ViewController: UIViewController {
             let user = data[data.count - 1]
             num1.text = user["uname"] as?String
             num2.text = user["mobile"] as? String
+            duiming1.text = user["aname"] as?String
+            duiming2.text = user["bname"] as? String
+
         }
     }
     
@@ -69,6 +62,8 @@ class ViewController: UIViewController {
     func saveUser() {
         let uname = self.num1.text!
         let mobile = self.num2.text!
+        let aname = self.duiming1.text!
+        let bname = self.duiming2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
         let sql = "insert into t_user(uname,mobile) values('\(uname)','\(mobile)')"
         print("sql: \(sql)")
@@ -76,10 +71,7 @@ class ViewController: UIViewController {
         let result = db.execute(sql)
         print(result)
     }
-    @IBAction func start(sender: AnyObject) {
-        
-        
-    }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -88,7 +80,10 @@ class ViewController: UIViewController {
     @IBAction func clear(sender: AnyObject) {
         num1.text = "0"
         num2.text = "0"
+        
+        
     }
+    
 
 }
 
