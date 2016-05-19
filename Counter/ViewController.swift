@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         //获取数据库实例
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20),aname varchar(20),bname varchar(20))")
+        db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20),aname varchar(30),bname varchar(30))")
         //如果有数据则加载
         initUser()
     }
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         let aname = self.duiming1.text!
         let bname = self.duiming2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_user(uname,mobile) values('\(uname)','\(mobile)')"
+        let sql = "insert into t_user(uname,mobile,aname,bname) values('\(uname)','\(mobile)','\(aname)',\(bname))"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
@@ -80,6 +80,8 @@ class ViewController: UIViewController {
     @IBAction func clear(sender: AnyObject) {
         num1.text = "0"
         num2.text = "0"
+        duiming1.text = ""
+        duiming2.text = ""
         
         
     }

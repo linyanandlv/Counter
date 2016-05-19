@@ -101,19 +101,11 @@
                                 <rect key="frame" x="36" y="321" width="230" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">比赛规则                                         1.21分制，3局2胜为佳                     2.每球的分制                                   3.每回合中，取胜的一方加一分      4.当双方均为20分时，领先对方2分的一方赢得该局比赛                       5.双方均为29分时，先取得30 分的一方赢得该局比赛                           6.一局比赛的获胜方在下一局率先发球                          </string>
+                                <mutableString key="text">比赛规则                                         1.21分制，3局2胜为佳                     2.每球得分制                                   3.每回合中，取胜的一方加一分      4.当双方均为20分时，领先对方2分的一方赢得该局比赛                       5.双方均为29分时，先取得30 分的一方赢得该局比赛                           6.一局比赛的获胜方在下一局率先发球                          </mutableString>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" id="hjZ-2G-bDU">
-                                <rect key="frame" x="175" y="153" width="97" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5rY-oc-PlL">
                                 <rect key="frame" x="32" y="100" width="37" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,6 +130,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" id="hjZ-2G-bDU">
+                                <rect key="frame" x="175" y="153" width="97" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
@@ -146,12 +146,12 @@
                         <outlet property="duiming1" destination="IMh-DK-hTa" id="NSO-KC-brA"/>
                         <outlet property="duiming2" destination="dGj-dQ-SnT" id="y5N-Zd-HAT"/>
                         <outlet property="num1" destination="KMi-wT-oZ1" id="DfW-4g-UpB"/>
-                        <outlet property="num2" destination="hjZ-2G-bDU" id="Cix-1r-S4z"/>
+                        <outlet property="num2" destination="hjZ-2G-bDU" id="qzo-vE-KnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-279" y="358"/>
+            <point key="canvasLocation" x="-373" y="365"/>
         </scene>
     </scenes>
 </document>
