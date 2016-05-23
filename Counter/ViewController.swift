@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         let aname = self.duiming1.text!
         let bname = self.duiming2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_user(uname,mobile,aname,bname) values('\(uname)','\(mobile)','\(aname)',\(bname))"
+        let sql = "insert into t_user(uname,mobile,aname,bname) values('\(uname)','\(mobile)','\(aname)','\(bname)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
@@ -86,6 +86,15 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func de(sender: AnyObject) {
+        let sql = "DROP TABLE t_user"
+        print("sql: \(sql)")
+        //通过封装的方法执行sql
+        let result = db.execute(sql)
+        print(result)
+
+        
+    }
 
 }
 

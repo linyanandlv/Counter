@@ -219,6 +219,7 @@
 				TargetAttributes = {
 					E83654CB1CDAF63A003C0C96 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y6SA3XMS6B;
 					};
 					E83654DF1CDAF63A003C0C96 = {
 						CreatedOnToolsVersion = 7.2;
@@ -427,10 +428,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Counter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = abc.Counter;
+				PRODUCT_BUNDLE_IDENTIFIER = gygywyg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/a20131105753/Desktop/Counter/Counter/Bridging-Header.h";
 			};
 			name = Debug;
@@ -439,10 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Counter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = abc.Counter;
+				PRODUCT_BUNDLE_IDENTIFIER = gygywyg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/a20131105753/Desktop/Counter/Counter/Bridging-Header.h";
 			};
 			name = Release;
